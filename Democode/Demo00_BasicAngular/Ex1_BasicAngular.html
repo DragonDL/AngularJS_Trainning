@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="../styles/bootstrap.css">
+    <link rel="stylesheet" href="../styles/main.css">
+
+    <script src="../scripts/angular.js"></script>
+
+    <script type="text/javascript">
+//        function titleController($scope) {
+//            $scope.title = "AngularJS";
+//        }
+
+        angular.module("app",[]).controller("titleController", function ($scope) {
+            $scope.title = "AngularJS";
+        })
+    </script>
+
+
+</head>
+<body>
+    <div class="container">
+        <h1 ng-controller="titleController">Welcome <span>{{title}}</span></h1>
+        <hr />
+
+        <div class="input-group">
+            <input class="form-control" ng-model="name"/>
+            <p>Hello {{name}}</p>
+        </div>
+    </div>
+
+</body>
+</html>
