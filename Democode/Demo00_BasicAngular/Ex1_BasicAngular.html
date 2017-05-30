@@ -1,36 +1,26 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="app">
+<html lang="en" ng-app="app_d01_ex1">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>AngularJS Demo</title>
 
     <link rel="stylesheet" href="../styles/bootstrap.css">
     <link rel="stylesheet" href="../styles/main.css">
 
+    <!-- AngularJS v1.6.4 -->
     <script src="../scripts/angular.js"></script>
-
     <script type="text/javascript">
-//        function titleController($scope) {
-//            $scope.title = "AngularJS";
-//        }
-
-        angular.module("app",[]).controller("titleController", function ($scope) {
-            $scope.title = "AngularJS";
-        })
+        angular.module('app_d01_ex1',[])
+            .controller('HelloAngularController', function ($scope) {
+                $scope.msg = {text: 'AngularJS'};
+            });
     </script>
-
-
 </head>
 <body>
-    <div class="container">
-        <h1 ng-controller="titleController">Welcome <span>{{title}}</span></h1>
-        <hr />
-
-        <div class="input-group">
-            <input class="form-control" ng-model="name"/>
-            <p>Hello {{name}}</p>
-        </div>
+    <div class="container" ng-controller="HelloAngularController">
+        <h1>Welcome {{msg.text}}</h1>
     </div>
-
 </body>
 </html>
+
+

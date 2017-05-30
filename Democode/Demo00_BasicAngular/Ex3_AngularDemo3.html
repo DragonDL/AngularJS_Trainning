@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AngularJS Demo</title>
+
+    <link rel="stylesheet" href="../styles/bootstrap.css">
+    <link rel="stylesheet" href="../styles/main.css">
+
+    <!-- AngularJS v1.6.4 -->
+    <script src="../scripts/angular.js"></script>
+    <script type="text/javascript">
+        angular.module("app_d01_ex3", [])
+            .controller("tableController", function () {
+                var self = this;
+                self.data = [
+                    {name: "Tom", gender: "Male", age: 23, regist: true},
+                    {name: "Jerry", gender: "Female", age: 21, regist: true},
+                    {name: "Mike", gender: "Male", age: 25, regist: false},
+                    {name: "Rose", gender: "Female", age: 22, regist: true},
+                    {name: "Jake", gender: "Male", age: 23, regist: false},
+                    {name: "Bush", gender: "Male", age: 24, regist: false}
+                ];
+            });
+    </script>
+</head>
+<body>
+<div class="container">
+    <h1>Welcome AngularJS</h1>
+    <hr />
+
+    <h3>处理集合数据</h3>
+    <div ng-app="app_d01_ex3">
+        <table class="table table-bordered" ng-controller="tableController as ctrl">
+            <tr>
+                <th class="col-sm-3">Name</th>
+                <th class="col-sm-3">Gender</th>
+                <th class="col-sm-3">Age</th>
+                <th class="col-sm-3">IsRegist</th>
+            </tr>
+            <tr ng-repeat="item in ctrl.data">
+                <td>{{item.name}}</td>
+                <td>{{item.gender}}</td>
+                <td>{{item.age}}</td>
+                <td><input type="checkbox" ng-model="item.regist"></td>
+            </tr>
+        </table>
+        <script type="text/javascript">
+
+        </script>
+    </div>
+</div>
+</body>
+</html>
+
+

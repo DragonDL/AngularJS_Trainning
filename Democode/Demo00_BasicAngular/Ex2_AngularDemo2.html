@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AngularJS Demo</title>
+
+    <link rel="stylesheet" href="../styles/bootstrap.css">
+    <link rel="stylesheet" href="../styles/main.css">
+
+    <!-- AngularJS v1.6.4 -->
+    <script src="../scripts/angular.js"></script>
+    <script type="text/javascript">
+        angular.module("app_d01_ex2", []);
+    </script>
+</head>
+<body>
+<div class="container">
+    <h1>Welcome AngularJS</h1>
+    <hr />
+
+    <h3>Model与表单控件关联</h3>
+    <div ng-app="app_d01_ex2">
+        <div class="form-group">
+            <label for="inputName" class="col-sm-2 control-label">Input</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputName" placeholder="Input your name"
+                    ng-model="name">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Output</label>
+            <div class="col-sm-10">
+                <p class="form-control-static">{{name}}</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
+
+
