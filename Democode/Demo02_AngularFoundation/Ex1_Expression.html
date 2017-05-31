@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AngularJS Demo</title>
+
+    <link rel="stylesheet" href="../styles/bootstrap.css">
+    <link rel="stylesheet" href="../styles/main.css">
+
+    <!-- AngularJS v1.6.4 -->
+    <script src="../scripts/angular.js"></script>
+    <script type="text/javascript">
+        angular.module("app_d02_ex1", []);
+    </script>
+</head>
+<body>
+<div class="container" ng-app="app_d02_ex1">
+    <h1>Angular表达式</h1>
+    <hr />
+
+    <div class="form-group">
+        <div class="col-sm-2">
+            <input type="number" class="form-control" title="number 1"
+                   ng-model="num1">
+        </div>
+        <label class="col-sm-1 control-label text-center">+</label>
+        <div class="col-sm-2">
+            <input type="number" class="form-control" title="number 2"
+                   ng-model="num2">
+        </div>
+        <label class="col-sm-1 control-label text-center">=</label>
+
+        <label class="col-sm-1 control-label text-center">{{num1+num2}}</label>
+    </div>
+</div>
+</body>
+</html>
+
+
