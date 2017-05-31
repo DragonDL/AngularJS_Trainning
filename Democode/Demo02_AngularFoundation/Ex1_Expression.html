@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../styles/main.css">
 
     <!-- AngularJS v1.6.4 -->
-    <script src="../scripts/angular.js"></script>
+    <script src="../scripts/angular-1.4.9.js"></script>
     <script type="text/javascript">
         angular.module("app_d02_ex1", []);
     </script>
@@ -16,22 +16,27 @@
 <body>
 <div class="container" ng-app="app_d02_ex1">
     <h1>Angular表达式</h1>
-    <hr />
+    <hr/>
 
-    <div class="form-group">
-        <div class="col-sm-2">
-            <input type="number" class="form-control" title="number 1"
-                   ng-model="num1">
+    <h3>基本表达式</h3>
+    <div class="row">
+        <div class="form-group">
+            <div class="col-sm-2">
+                <input type="number" class="form-control" title="number 1"
+                       ng-model="num1">
+            </div>
+            <label class="col-sm-1 control-label text-center">+</label>
+            <div class="col-sm-2">
+                <input type="number" class="form-control" title="number 2"
+                       ng-model="num2">
+            </div>
+            <label class="col-sm-1 control-label text-center">=</label>
+            <label class="col-sm-1 control-label text-center">{{num1+num2}}</label>
         </div>
-        <label class="col-sm-1 control-label text-center">+</label>
-        <div class="col-sm-2">
-            <input type="number" class="form-control" title="number 2"
-                   ng-model="num2">
-        </div>
-        <label class="col-sm-1 control-label text-center">=</label>
-
-        <label class="col-sm-1 control-label text-center">{{num1+num2}}</label>
     </div>
+    <hr/>
+
+
 </div>
 </body>
 </html>
