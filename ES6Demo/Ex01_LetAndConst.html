@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ECMAScript 6 Demo</title>
+
+    <link rel="stylesheet" href="./styles/bootstrap.css">
+    <link rel="stylesheet" href="./styles/main.css">
+
+    <script type="text/javascript">
+    </script>
+</head>
+<body>
+<div class="container" >
+    <h2>ECMAScript 6 Demo</h2>
+    <hr />
+    <h3>let与const</h3>
+
+    <h4>基本用法</h4>
+    <script type="text/javascript">
+//        {
+//            var i = 100;
+//            let j = 100;
+//
+//            console.log("in block i=" + i);
+//            console.log("in block j=" + j);
+//        }
+//        console.log("out block i=" + i);
+//        console.log("out block j=" + j);
+    </script>
+
+    <h4>变量提升</h4>
+    <script type="text/javascript">
+//        // var 的情况
+//        console.log(i);
+//        var i = 2;
+//
+//        // let 的情况
+//        console.log(j);
+//        let j = 2;
+    </script>
+
+    <h4>暂时性死区（TDZ）</h4>
+    <script type="text/javascript">
+//        var tmp = 123;
+//        if (true) {
+//            tmp = 'abc'; // ReferenceError
+//            let tmp;
+//        }
+    </script>
+
+    <h4>不允许重复声明</h4>
+    <script type="text/javascript">
+//        // 报错
+//        function func1() {
+//            let a = 10;
+//            console.log(a);
+//            var a = 1;
+//            console.log(a);
+//        }
+//
+//        // 报错
+//        function func2() {
+//            let b = 10;
+//            console.log(b);
+//            let b = 1;
+//            console.log(b);
+//        }
+//
+//        func1();
+//        func2();
+    </script>
+
+    <h4>不允许重复声明</h4>
+    <script type="text/javascript">
+//        function func3(arg3) {
+//            let arg3; // 报错
+//        }
+//
+//        function func4(arg4) {
+//            {
+//                let arg4; // 不报错
+//            }
+//        }
+    </script>
+
+
+
+    <h3>块级作用域</h3>
+
+    <h4>块级作用域中的函数</h4>
+    <script type="text/javascript">
+        {
+            function func() {
+                console.log("Function in block");
+            }
+
+            func();
+        }
+
+        func(); // 理论上应报错，但很多浏览器将其提升为var声明的函数，可执行
+    </script>
+
+
+
+    <h3>const命令</h3>
+
+
+    <h3>顶层对象的属性</h3>
+    <script type="text/javascript">
+        var a = 1;
+        console.log(window.a);  // 1
+
+        let b = 2;
+        console.log(window.b);  // undefined
+    </script>
+
+
+</div>
+</body>
+</html>
+
+
