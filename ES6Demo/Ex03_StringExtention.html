@@ -112,7 +112,48 @@
 
         console.log(base.repeat(-1));     // error
         console.log(base.repeat("na"));   // error
+
     </script>
+
+
+
+    <h4>模板字符串</h4>
+    <script type="text/javascript">
+        let name = "Tom";
+        let date = new Date();
+        console.log(`Welcome ${name} at ${date}`);
+
+        let user = {name: "Tom", title: "Dr."};
+        console.log(`Welcome ${user.title} ${user.name}`);
+
+        function func() {
+            return "Welcome";
+        }
+
+        console.log(`${func()} ${name} ${2+3}`);
+    </script>
+
+    <h4>模板字符串嵌套</h4>
+    <script type="text/javascript">
+        const tmpl = addrs => `
+          <table>
+          ${addrs.map(addr => `
+            <tr>
+                <td>${addr.first}</td>
+                <td>${addr.last}</td>
+            </tr>
+          `).join('')}
+          </table>
+        `;
+
+        const data = [
+            { first: 'Jane', last: 'Bond' },
+            { first: 'Lars', last: 'Croft' },
+        ];
+
+        console.log(tmpl(data));
+    </script>
+
 
 </div>
 </body>
