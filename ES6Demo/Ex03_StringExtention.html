@@ -161,6 +161,40 @@
         // 等价于 alert("Hello World");
     </script>
 
+
+    <h4>标签模板</h4>
+    <script type="text/javascript">
+        let a = 5;
+        let b = 10;
+
+        tag`Hello ${ a + b } world ${ a * b }`;
+        // 等同于 tag(['Hello ', ' world ', ''], 15, 50);
+
+        function tag(stringArr, ...values){
+            console.log("-------------------");
+            for (let arr of stringArr){
+                console.log('|' + arr + '|');
+            }
+            console.log("-------------------");
+            for (let val of values) {
+                console.log('|' + val + '|');
+            }
+            console.log("--------------------");
+        }
+    </script>
+
+    <h4>String.raw</h4>
+    <script type="text/javascript">
+        String.raw`Hi\n${2+3}!`;
+        // "Hi\\n5!"
+
+        String.raw`Hi\u000A!`;
+        // 'Hi\\u000A!'
+
+        String.raw`Hi\\n`
+        // "Hi\\n"
+    </script>
+
 </div>
 </body>
 </html>
