@@ -51,6 +51,124 @@
     </script>
 
 
+    <h4>Math.trunc()</h4>
+    <script type="text/javascript">
+
+        Math.trunc(4.1); // 4
+        Math.trunc(4.9); // 4
+        Math.trunc(-4.1); // -4
+        Math.trunc(-4.9); // -4
+        Math.trunc(-0.1234); // -0
+
+        Math.trunc('123.456'); // 123
+
+        Math.trunc(NaN);      // NaN
+        Math.trunc('foo');    // NaN
+        Math.trunc();         // NaN
+
+    </script>
+
+    <h4>Math.sign()</h4>
+    <script type="text/javascript">
+
+        Math.sign(-5); // -1
+        Math.sign(5); // +1
+        Math.sign(0); // +0
+        Math.sign(-0); // -0
+        Math.sign(NaN); // NaN
+        Math.sign('foo'); // NaN
+        Math.sign();      // NaN
+
+    </script>
+
+
+    <h4>Math.cbrt()</h4>
+    <script type="text/javascript">
+
+        Math.cbrt(-1); // -1
+        Math.cbrt(0);  // 0
+        Math.cbrt(1);  // 1
+        Math.cbrt(2);  // 1.2599210498948734
+
+        Math.cbrt('8'); // 2
+        Math.cbrt('hello'); // NaN
+
+    </script>
+
+
+    <h4>Math.clz32()</h4>
+    <script type="text/javascript">
+
+        Math.clz32(0); // 32
+        Math.clz32(1); // 31
+        Math.clz32(1000); // 22
+        Math.clz32(0b01000000000000000000000000000000); // 1
+        Math.clz32(0b00100000000000000000000000000000); // 2
+
+        Math.clz32(3.2); // 30
+        Math.clz32(3.9); // 30
+
+        Math.clz32(); // 32
+        Math.clz32(NaN); // 32
+        Math.clz32(Infinity); // 32
+        Math.clz32(null); // 32
+        Math.clz32('foo'); // 32
+        Math.clz32([]); // 32
+        Math.clz32({}); // 32
+        Math.clz32(true); // 31
+
+    </script>
+
+    <h4>Math.fround()</h4>
+    <script type="text/javascript">
+
+        Math.fround(0);     // 0
+        Math.fround(1);     // 1
+        Math.fround(1.337); // 1.3370000123977661
+        Math.fround(1.5);   // 1.5
+        Math.fround(NaN);   // NaN
+
+    </script>
+
+    <h4>Math.fround()</h4>
+    <script type="text/javascript">
+
+        Math.hypot(3, 4);        // 5
+        Math.hypot(3, 4, 5);     // 7.0710678118654755
+        Math.hypot();            // 0
+        Math.hypot(NaN);         // NaN
+        Math.hypot(3, 4, 'foo'); // NaN
+        Math.hypot(3, 4, '5');   // 7.0710678118654755
+        Math.hypot(-3);          // 3
+
+    </script>
+
+    <h4>指数运算符</h4>
+    <script type="text/javascript">
+
+        let x = 2 ** 2; // 4
+        let y = 2 ** 3; // 8
+
+        let a = 1.5;
+        a **= 2;
+        // 等同于 a = a * a;
+
+        let b = 4;
+        b **= 3;
+        // 等同于 b = b * b * b;
+
+
+
+        let m = Math.pow(99, 99);
+        // 3.697296376497263e+197
+
+        let n = 99 ** 99;
+        // 3.697296376497268e+197
+
+    </script>
+
+
+
 </div>
 </body>
 </html>
