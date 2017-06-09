@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ECMAScript 6 Demo</title>
+
+    <link rel="stylesheet" href="./styles/bootstrap.css">
+    <link rel="stylesheet" href="./styles/main.css">
+
+    <script type="text/javascript">
+    </script>
+</head>
+<body>
+<div class="container" >
+    <h2>ECMAScript 6 Demo</h2>
+    <hr />
+    <h3>对象的扩展</h3>
+
+    <h4>数组的解构赋值</h4>
+    <script type="text/javascript">
+
+        let foo = 'bar';
+
+        let baz1 = {foo};       // {foo : "bar"}
+        // 等同于
+        let baz1_ = {foo: foo};
+
+        let obj1 = {
+            method() { return "Hello!"; }
+        };
+        // 等同于
+        let obj1_ = {
+            method: function() { return "Hello!"; }
+        };
+
+
+        let propKey = 'foo';
+        let obj2 = {
+            [propKey]: true,
+            ['a' + 'bc']: 123
+        };
+        // obj2 = {foo: true, abc: 123};
+
+        let obj3 = {
+            ['h' + 'ello']() { return 'hi'; }
+        };
+        obj3.hello(); // hi
+
+    </script>
+
+</div>
+</body>
+</html>
+
+
